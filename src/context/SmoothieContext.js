@@ -3,6 +3,7 @@ import React, { useState, createContext } from 'react';
 export const SmoothieContext = createContext();
 
 const SmoothieContextProvider = (props) => {
+  //  menu state
   const [state] = useState({
     base: ['Ice', 'Milk', 'Almond Milk'],
     fruits: [
@@ -23,12 +24,17 @@ const SmoothieContextProvider = (props) => {
     ],
   });
 
+  //  order state
   const [order, setOrder] = useState({
     base: '',
     fruits: [],
     toppings: [],
   });
 
+  //  modal state
+  const [showModal, setShowModal] = useState(false);
+
+  //  order functions
   const addBase = (base) => {
     setOrder({ ...order, base });
   };
@@ -55,7 +61,7 @@ const SmoothieContextProvider = (props) => {
 
   return (
     <SmoothieContext.Provider
-      value={{ state, order, addBase, addFruit, addToppings }}
+      value={{ state, order, addBase, addFruit, addToppings, showModal, setShowModal }}
     >
       {props.children}
     </SmoothieContext.Provider>

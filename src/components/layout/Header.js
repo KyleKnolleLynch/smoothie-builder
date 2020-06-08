@@ -1,14 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
     <header>
-      <div className='title'>
-        <Link to='/'>
-          <h2>Smoothie Builder</h2>
-        </Link>
-      </div>
+      <motion.div
+        className='title'
+        initial={{ y: -250 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 0.3, type: 'spring', stiffness: 130 }}
+      >
+        <a href='/'>
+          <h4>Smoothie Builder</h4>
+        </a>
+      </motion.div>
     </header>
   );
 };
