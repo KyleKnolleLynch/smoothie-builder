@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'futuraBT-Light';
+  src: url('../assets/fonts/futura-light-bt-copy-1.woff2') format('woff2'),
+    url('../assets/fonts/FuturaBT-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futuraBT-Bold';
+  src: url('../assets/fonts/futura-bold-bt.woff2') format('woff2'),
+    url('../assets/fonts/FuturaBT-Bold.woff') format('woff');
+  font-weight: 300;
+  font-style: bold;
+}
+
+$white-color: #fff;
