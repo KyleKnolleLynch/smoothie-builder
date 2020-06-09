@@ -29,6 +29,20 @@ body {
   overflow: hidden;
 }
 
+button {
+  padding: 1.5rem 3.5rem;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid $white-color;
+  border-radius: 3rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
 section {
   min-height: 100vh;
   margin-top: 25vh;
@@ -59,18 +73,16 @@ section {
     margin-top: 8rem;
     button {
       min-width: 26rem;
-      background: transparent;
       font-size: 2.4rem;
-      padding: 1.5rem 3.5rem;
       color: #53f5b9;
-      border: 2px solid $white-color;
-      border-radius: 3rem;
-      &:hover {
-        cursor: pointer;
-      }
-      &:focus {
-        outline: none;
-      }
     }
   }
+}
+
+.loader {
+  width: 1rem;
+  height: 1rem;
+  margin: 4rem auto;
+  border-radius: 50%;
+  background: $white-color;
 }

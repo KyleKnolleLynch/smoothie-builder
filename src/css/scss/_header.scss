@@ -1,8 +1,23 @@
 header {
-  padding: 3rem 6rem;
-  h4 {
-    font-size: 2.2rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid $white-color;
+  width: 100vw;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  // .pizza-svg {
+  //   width: 80px;
+  //   overflow: visible;
+  //   stroke: #fff;
+  //   stroke-width: 4;
+  //   stroke-linejoin: round;
+  //   stroke-linecap: round;
+  // }
+  .title {
+    flex-grow: 1;
+    margin-left: 2rem;
+    h2 {
+      font-size: 3.2rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid $white-color;
+    }
   }
 }

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { SmoothieContext } from './context/SmoothieContext';
 import Header from './components/layout/Header';
 import Home from './components/Home';
 import Base from './components/Base';
@@ -13,11 +14,15 @@ import './css/main.css';
 
 const App = () => {
   const location = useLocation();
+  const { setShowModal } = useContext(SmoothieContext);
   return (
     <>
       <Header />
       <Modal />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence
+        exitBeforeEnter
+        onExitComplete={() => setShowModal(false)}
+      >
         <Switch location={location} key={location.key}>
           <Route exact path='/' component={Home} />
           <Route exact path='/base' component={Base} />

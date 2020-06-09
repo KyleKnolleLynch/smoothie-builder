@@ -31,9 +31,6 @@ const SmoothieContextProvider = (props) => {
     toppings: [],
   });
 
-  //  modal state
-  const [showModal, setShowModal] = useState(false);
-
   //  order functions
   const addBase = (base) => {
     setOrder({ ...order, base });
@@ -59,9 +56,20 @@ const SmoothieContextProvider = (props) => {
     setOrder({ ...order, toppings: newTopping });
   };
 
+  //  modal state
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <SmoothieContext.Provider
-      value={{ state, order, addBase, addFruit, addToppings, showModal, setShowModal }}
+      value={{
+        state,
+        order,
+        addBase,
+        addFruit,
+        addToppings,
+        showModal,
+        setShowModal,
+      }}
     >
       {props.children}
     </SmoothieContext.Provider>

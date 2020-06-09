@@ -5,12 +5,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const containerVariants = {
   hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+};
+
+const modalVariants = {
+  hidden: { y: '-100vh', opacity: 0 },
   visible: {
+    y: '20rem',
     opacity: 1,
-    transition: {
-      delay: 1.5,
-      duration: 1.5,
-    },
+    transition: { delay: 0.5 },
   },
 };
 
@@ -24,16 +27,14 @@ const Modal = () => {
           variants={containerVariants}
           initial='hidden'
           animate='visible'
+          exit='hidden'
         >
-          <div className='modal'>
-            <div className='modal-content'>
-              <h1>My Modal</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
-                tempora.
-              </p>
-            </div>
-          </div>
+          <motion.div className='modal' variants={modalVariants}>
+            <h4>Like to build another?</h4>
+            <Link to='/'>
+              <button>Let's Go!</button>
+            </Link>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

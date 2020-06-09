@@ -18,6 +18,10 @@ const sectionVariants = {
       staggerChildren: 0.4,
     },
   },
+  exit: {
+    x: '-100vw',
+    transition: { ease: 'easeInOut' },
+  },
 };
 
 const childVariants = {
@@ -46,6 +50,7 @@ const Confirm = () => {
       variants={sectionVariants}
       initial='hidden'
       animate='visible'
+      exit='exit'
     >
       <h1>Thank you for your order</h1>
       <motion.p variants={childVariants}>
