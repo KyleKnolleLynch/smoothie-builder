@@ -3,14 +3,14 @@ header {
   padding: 4rem;
   display: flex;
   align-items: center;
-  // .pizza-svg {
-  //   width: 80px;
-  //   overflow: visible;
-  //   stroke: #fff;
-  //   stroke-width: 4;
-  //   stroke-linejoin: round;
-  //   stroke-linecap: round;
-  // }
+  .smoothie-svg {
+    width: 80px;
+    overflow: visible;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
   .title {
     flex-grow: 1;
     margin-left: 2rem;
