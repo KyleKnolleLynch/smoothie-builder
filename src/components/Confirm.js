@@ -53,6 +53,8 @@ const Confirm = () => {
       exit='exit'
     >
       <h1>Thank you for your order</h1>
+      <span>Current Smoothie Cost: ${order.cost}</span>
+      <span>Order Total: ${order.total}</span>
       <motion.p variants={childVariants}>
         You've ordered {desc} {order.base} smoothie with
       </motion.p>

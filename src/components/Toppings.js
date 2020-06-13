@@ -35,7 +35,7 @@ const buttonVariants = {
 };
 
 const Toppings = () => {
-  const { state, order, addToppings } = useContext(SmoothieContext);
+  const { state, order, addToppings, addCost } = useContext(SmoothieContext);
   const toppings = state.toppings;
 
   return (
@@ -66,7 +66,7 @@ const Toppings = () => {
 
       <div className='next'>
         <Link to='/confirm'>
-          <motion.button variants={buttonVariants} whileHover='hover'>
+          <motion.button variants={buttonVariants} whileHover='hover' onClick={addCost}>
             Order
           </motion.button>
         </Link>
