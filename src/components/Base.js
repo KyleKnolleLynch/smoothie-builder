@@ -60,6 +60,7 @@ const Base = () => {
       exit='exit'
     >
       <h3>Step 1: Choose a base</h3>
+      <span className='pricing'>Base Cost: ${state.baseCost}</span>
       <ul>
         {base.map((base) => {
           let spanClass = order.base === base ? 'active' : '';

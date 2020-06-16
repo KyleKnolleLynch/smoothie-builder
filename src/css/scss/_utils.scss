@@ -45,14 +45,21 @@ button {
 
 section {
   min-height: 100vh;
-  margin-top: 25vh;
+  margin-top: 20vh;
   text-align: center;
   h3 {
     font-size: 2.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.4rem;
     border-bottom: 1px solid $white-color;
     display: inline-block;
+  }
+  .pricing {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
   }
   li {
     width: 40%;

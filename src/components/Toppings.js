@@ -47,6 +47,7 @@ const Toppings = () => {
       exit='exit'
     >
       <h3>Step 3: Choose Toppings</h3>
+      <span className='pricing'>$.50 each</span>
       <span className='toppings-option'>~ optional ~</span>
       <ul>
         {toppings.map((topping) => {
@@ -66,7 +67,11 @@ const Toppings = () => {
 
       <div className='next'>
         <Link to='/confirm'>
-          <motion.button variants={buttonVariants} whileHover='hover' onClick={addCost}>
+          <motion.button
+            variants={buttonVariants}
+            whileHover='hover'
+            onClick={addCost}
+          >
             Order
           </motion.button>
         </Link>

@@ -18,7 +18,7 @@ const modalVariants = {
 };
 
 const Modal = () => {
-  const { showModal } = useContext(SmoothieContext);
+  const { showModal, clearOrder } = useContext(SmoothieContext);
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && (
@@ -32,7 +32,7 @@ const Modal = () => {
           <motion.div className='modal' variants={modalVariants}>
             <h4>Like to build another?</h4>
             <Link to='/'>
-              <button>Let's Go!</button>
+              <button onClick={clearOrder}>Let's Go!</button>
             </Link>
           </motion.div>
         </motion.div>

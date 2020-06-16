@@ -22,6 +22,7 @@ const SmoothieContextProvider = (props) => {
       'Dried Cherries',
       'Cacao Nibs',
     ],
+    baseCost: 5,
   });
 
   //  order state
@@ -61,9 +62,18 @@ const SmoothieContextProvider = (props) => {
   const addCost = () => {
     const fruitsTotal = order.fruits.length * 1;
     const toppingsTotal = order.toppings.length * 0.5;
-    let tempCost = (fruitsTotal + toppingsTotal + 5).toFixed(2);
+    let tempCost = (fruitsTotal + toppingsTotal + state.baseCost).toFixed(2);
     let tempTotal = (+tempCost + +order.total).toFixed(2);
     setOrder({ ...order, cost: tempCost, total: tempTotal });
+  };
+
+  const clearOrder = () => {
+    setOrder({
+      ...order,
+      base: '',
+      fruits: [],
+      toppings: [],
+    });
   };
 
   //  modal state
@@ -80,6 +90,7 @@ const SmoothieContextProvider = (props) => {
         showModal,
         setShowModal,
         addCost,
+        clearOrder,
       }}
     >
       {props.children}

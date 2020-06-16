@@ -47,6 +47,7 @@ const Fruit = () => {
       exit='exit'
     >
       <h3>Step 2: Select Fresh Fruits</h3>
+      <span className='pricing'>$1 each</span>
       <ul>
         {fruits.map((fruit) => {
           let spanClass = order.fruits.includes(fruit) ? 'active' : '';
