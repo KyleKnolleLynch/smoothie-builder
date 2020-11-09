@@ -55,7 +55,7 @@ const Fruit = () => {
             <motion.li
               key={fruit}
               onClick={() => addFruit(fruit)}
-              whileHover={{ scale: 1.3, color: '#31A87C' }}
+              whileHover={{ scale: 1.3, color: '#09B309' }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <span className={spanClass}>{fruit}</span>
